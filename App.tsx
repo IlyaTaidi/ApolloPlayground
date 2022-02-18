@@ -1,8 +1,9 @@
-import { AnimatePresence, MotiView } from "moti";
-import { useReducer } from "react";
-import { Pressable, StyleSheet } from "react-native";
+import { AnimatePresence } from 'framer-motion'
+import React, { useReducer } from 'react'
+import { StyleSheet, Pressable } from 'react-native'
+import { MotiView } from 'moti'
 
-function Shape({ bg }) {
+function Shape({ bg }: { bg: string }) {
   return (
     <MotiView
       from={{
@@ -17,37 +18,41 @@ function Shape({ bg }) {
         opacity: 0,
         scale: 0.9,
       }}
-      style={[styles.shape, { backgroundColor: bg }]}
+      style={[styles.shape, { borderColor: bg }]}
     />
-  );
+  )
 }
 
-export default function App() {
-  const [visible, toggle] = useReducer((s) => !s, true);
+export default function ExitBeforeEnter() {
+  const [visible, toggle] = useReducer((s) => !s, true)
+
   return (
     <Pressable onPress={toggle} style={styles.container}>
       <AnimatePresence exitBeforeEnter>
-        {visible && <Shape bg="hotpink" key="hotpink" />}
-        {!visible && <Shape bg="cyan" key="cyan" />}
+        {visible && <Shape bg="red" key="red" />}
+        {!visible && <Shape bg="blue" key="blue" />}
       </AnimatePresence>
     </Pressable>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
   shape: {
-    justifyContent: "center",
+    justifyContent: 'center',
     height: 250,
     width: 250,
-    borderRadius: 25,
+    borderRadius: 999,
     marginRight: 10,
-    backgroundColor: "white",
+    backgroundColor: 'transparent',
+    borderStyle: 'solid',
+    borderColor: 'white',
+    borderWidth: 2
   },
   container: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    flexDirection: "row",
-    backgroundColor: "#9c1aff",
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'row',
+    backgroundColor: '#000000',
   },
-});
+})
