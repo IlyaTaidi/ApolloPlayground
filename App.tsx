@@ -3,47 +3,44 @@ import React, { useReducer } from 'react'
 import { StyleSheet, Pressable } from 'react-native'
 import { MotiView } from 'moti'
 
-function Shape({ bg }: { bg: string }) {
+function Shape() {
   return (
     <MotiView
       from={{
-        opacity: 0,
-        scale: 0.5,
+        translateY: -100,
       }}
       animate={{
-        opacity: 1,
-        scale: 1,
+        translateY: 0,
       }}
-      exit={{
-        opacity: 0,
-        scale: 0.9,
+      transition={{
+        loop: true,
+        type: 'timing',
+        duration: 1500,
+        delay: 100,
       }}
-      style={[styles.shape, { borderColor: bg }]}
+      style={[styles.shape]}
     />
   )
 }
 
-export default function ExitBeforeEnter() {
-  const [visible, toggle] = useReducer((s) => !s, true)
-
+export default function Loop() {
   return (
-    <Pressable onPress={toggle} style={styles.container}>
-      <AnimatePresence exitBeforeEnter>
-        {visible && <Shape bg="red" key="red" />}
-        {!visible && <Shape bg="blue" key="blue" />}
-      </AnimatePresence>
-    </Pressable>
+    <MotiView style={styles.container}>
+      <Shape />
+    </MotiView>
   )
 }
+{/* <img src="https://imagedelivery.net/jwHiTPdD9NSTNd6dIleh1A/c70cfd84-87de-4130-2495-60276086fa00/public"
+  alt="" /> */}
 
 const styles = StyleSheet.create({
   shape: {
     justifyContent: 'center',
     height: 250,
-    width: 230,
+    width: 250,
     borderRadius: 998,
     marginRight: 10,
-    backgroundColor: 'blue',
+    backgroundColor: 'transparent',
     borderStyle: 'solid',
     borderColor: 'white',
     borderWidth: 2
@@ -53,6 +50,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
-    backgroundColor: '#ffffff',
+    backgroundColor: '#000000',
   },
 })
+
+/*const cursor = () {
+  const dot = useRef(null);
+  const dotOutline = useRef(null);
+
+  return (
+    <>
+      <div ref={dotOutline} className='cursor-dot-outline'><</div>
+      <div ref={dot} className="cursor-dot"><</div>
+    </>
+
+  )
+}*/
