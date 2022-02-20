@@ -1,24 +1,28 @@
-import { AnimatePresence } from 'framer-motion'
-import React, { useReducer } from 'react'
-import { StyleSheet, Pressable } from 'react-native'
 import { MotiView } from 'moti'
+import React from 'react'
+import { StyleSheet } from 'react-native'
+import { Image as MotiImage } from "moti"
 
-function Shape() {
+function Grain() {
   return (
-    <MotiView
+    <MotiImage
       from={{
-        translateY: -100,
+        translateY: 300,
       }}
       animate={{
-        translateY: 0,
+        translateY: -550,
       }}
       transition={{
         loop: true,
         type: 'timing',
-        duration: 1500,
-        delay: 100,
+        duration: 130,
+        delay: 0,
+        repeatReverse: false
       }}
-      style={[styles.shape]}
+      style={[styles.grain]}
+      source={{
+        uri: 'https://cdn.discordapp.com/attachments/940382767550697513/945049587062804500/Untitled-1-Recovered.png',
+      }}
     />
   )
 }
@@ -26,31 +30,31 @@ function Shape() {
 export default function Loop() {
   return (
     <MotiView style={styles.container}>
-      <Shape />
+      <Grain />
     </MotiView>
   )
 }
-{/* <img src="https://imagedelivery.net/jwHiTPdD9NSTNd6dIleh1A/c70cfd84-87de-4130-2495-60276086fa00/public"
-  alt="" /> */}
 
 const styles = StyleSheet.create({
-  shape: {
+  grain: {
     justifyContent: 'center',
-    height: 250,
-    width: 250,
-    borderRadius: 998,
-    marginRight: 10,
+    height: 3000,
+    width: '100%',
     backgroundColor: 'transparent',
-    borderStyle: 'solid',
-    borderColor: 'white',
-    borderWidth: 2
+    overflow: 'hidden',
+    opacity: 0.1
+
   },
   container: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
-    backgroundColor: '#000000',
+    backgroundColor: '#efe6dd',
+    overflow: 'hidden',
+    position: 'absolute',
+    height: '100%',
+    width: '100%',
   },
 })
 
