@@ -26,6 +26,29 @@ function Grain() {
     />
   )
 }
+function Stars() {
+  return (
+    <MotiView
+      from={{
+        translateY: -100,
+      }}
+      animate={{
+        translateY: 0,
+      }}
+      transition={{
+        loop: true,
+        type: 'timing',
+        duration: 1500,
+        delay: 100,
+        repeatReverse: true
+      }}
+      style={[styles.stars]}
+      source={{
+        uri: 'https://cdn.discordapp.com/attachments/941406327928946778/945082136342446161/newstars.png',
+      }}
+    />
+  )
+}
 
 export default function Loop() {
   return (
@@ -34,6 +57,7 @@ export default function Loop() {
     </MotiView>
   )
 }
+
 
 const styles = StyleSheet.create({
   grain: {
@@ -56,8 +80,15 @@ const styles = StyleSheet.create({
     height: '100%',
     width: '100%',
   },
+   stars: {
+   justifyContent: 'center',
+    height: 3000,
+    width: '100%',
+    backgroundColor: 'transparent',
+    overflow: 'hidden',
+    opacity: 1
 
-})
+}})
 
 /*const cursor = () {
   const dot = useRef(null);
