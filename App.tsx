@@ -15,7 +15,7 @@ function Grain() {
       transition={{
         loop: true,
         type: 'timing',
-        duration: 130,
+        duration: 200,
         delay: 0,
         repeatReverse: false
       }}
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     width: '100%',
     backgroundColor: 'transparent',
     overflow: 'hidden',
-    opacity: 0.1
+    opacity: 0.12
 
   },
   container: {
@@ -50,12 +50,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
-    backgroundColor: '#efe6dd',
+    backgroundColor: '#000000',
     overflow: 'hidden',
     position: 'absolute',
     height: '100%',
     width: '100%',
   },
+
 })
 
 /*const cursor = () {
