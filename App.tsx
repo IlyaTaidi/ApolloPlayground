@@ -40,10 +40,10 @@ const styles = StyleSheet.create({
   shape: {
     justifyContent: 'center',
     height: 250,
-    width: 250,
-    borderRadius: 999,
+    width: 230,
+    borderRadius: 998,
     marginRight: 10,
-    backgroundColor: 'transparent',
+    backgroundColor: 'blue',
     borderStyle: 'solid',
     borderColor: 'white',
     borderWidth: 2
@@ -53,6 +53,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
-    backgroundColor: '#000000',
+    backgroundColor: '#ffffff',
   },
 })
