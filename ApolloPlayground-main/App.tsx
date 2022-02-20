@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
     height: 250,
     width: 250,
     borderRadius: 999,
+    marginRight: 10,
     backgroundColor: 'transparent',
     borderStyle: 'solid',
     borderColor: 'white',
