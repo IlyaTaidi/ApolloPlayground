@@ -2,6 +2,7 @@ import { AnimatePresence } from 'framer-motion'
 import React, { useReducer } from 'react'
 import { StyleSheet, Pressable } from 'react-native'
 import { MotiView } from 'moti'
+import {ImageBackground} from 'react-native'
 
 function Shape({ bg }: { bg: string }) {
   return (
@@ -53,6 +54,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
-    backgroundColor: '#000000',
+    backgroundImage: "url(" + "https://imagedelivery.net/jwHiTPdD9NSTNd6dIleh1A/18c40f39-d596-489e-1777-a68f3b526300/public" + ")",
   },
 })
