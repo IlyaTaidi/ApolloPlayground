@@ -9,7 +9,8 @@
     "react-native-gesture-handler": "~2.1.0",
     "react-native-reanimated": "2.3.1",
     "react-native-screens": "~3.10.1",
-    "react-native-web": "^0.15.5"
+    "react-native-web": "^0.15.5",
+    "react-tsparticles": "^1.41.4"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
