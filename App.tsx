@@ -1,7 +1,6 @@
-import { MotiView } from 'moti'
-import React from 'react'
-import { StyleSheet } from 'react-native'
-import Cursor from './Cursor';
+import { MotiView } from 'moti';
+import React from 'react';
+import { StyleSheet } from 'react-native';
 import Grain from './components/grain';
 
 //prevent the right click menu from appearing and 
