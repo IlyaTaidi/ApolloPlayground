@@ -16,11 +16,11 @@ const Stars = () =>
             },
             particles: {
                 color: {
-                    value: "#ffffff",
+                    value: "#fdfbb1",
                 },
                 links: {
                     color: "#ffffff",
-                    distance: 30,
+                    distance: 20,
                     enable: true,
                     opacity: 0.2,
                     width: 1,
@@ -33,25 +33,37 @@ const Stars = () =>
                     enable: true,
                     outMode: "out",
                     random: true,
-                    speed: 0.2,
+                    speed: 0.08,
                     straight: false,
                 },
                 number: {
                     density: {
                         enable: true,
-                        value_area: 600,
+                        value_area: 900,
                     },
-                    value: 60,
+                    value: 600,
                 },
                 opacity: {
-                    value: 0.5,
+                    value: 0.1,
                 },
                 shape: {
                     type: "circle",
                 },
+                twinkle: {
+                    "lines": {
+                    "enable": true,
+                    "frequency": 100,
+                    "opacity": .5
+                                },
+                    "particles": {
+                    "enable": true,
+                    "frequency": 100,
+                    "opacity": .5
+                                }
+                },
                 size: {
-                    random: false,
-                    value: 1,
+                    random: true,
+                    value: 2.5,
                 },
             },
             detectRetina: true,
