@@ -14,7 +14,7 @@ function Grain() {
             transition={{
                 loop: true,
                 type: 'timing',
-                duration: 200,
+                duration: 20000,
                 delay: 100,
                 repeatReverse: false
             }}
@@ -33,17 +33,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'transparent',
         overflow: 'hidden',
         opacity: 0.8,
-
-    },
-    container: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-        flexDirection: 'row',
-        backgroundColor: '#000000',
-        overflow: 'hidden',
-        position: 'absolute',
-        height: '100%',
-        width: '100%',
-    },
+    }
 })
+
+export default Grain

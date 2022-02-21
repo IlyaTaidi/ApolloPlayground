@@ -1,32 +1,9 @@
 import { MotiView } from 'moti'
 import React from 'react'
 import { StyleSheet } from 'react-native'
-import { Image as MotiImage } from "moti"
 import Cursor from './Cursor';
+import Grain from './components/grain';
 
-function Grain() {
-  return (
-    <MotiImage
-      from={{
-        translateY: 1000,
-      }}
-      animate={{
-        translateY: -1000,
-      }}
-      transition={{
-        loop: true,
-        type: 'timing',
-        duration: 200,
-        delay: 100,
-        repeatReverse: false
-      }}
-      style={[styles.grain]}
-      source={{
-        uri: 'https://cdn.discordapp.com/attachments/940382767550697513/945049587062804500/Untitled-1-Recovered.png',
-      }}
-    />
-  )
-}
 //prevent the right click menu from appearing and 
 //capture the position to later render a custom menu
 document.addEventListener("contextmenu", (event) => {
@@ -34,14 +11,15 @@ document.addEventListener("contextmenu", (event) => {
   const xPos = event.pageX + "px";
   const yPos = event.pageY + "px";
 })
+
 //Call the cursor function from cursor.js
-export default function cursor() {
+/* export default function cursor() {
   return(
     <Cursor />
   )
 }
-
-export function Loop() {
+ */
+export default function App() {
   return (
     <MotiView style={styles.container}>
       <Grain />
@@ -51,15 +29,6 @@ export function Loop() {
 
 
 const styles = StyleSheet.create({
-  grain: {
-    justifyContent: 'center',
-    height: '100vh',
-    width: '100%',
-    backgroundColor: 'transparent',
-    overflow: 'hidden',
-    opacity: 0.8,
-    
-  },
   container: {
     flex: 1,
     alignItems: 'center',
