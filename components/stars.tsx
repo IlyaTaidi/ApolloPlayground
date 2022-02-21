@@ -19,7 +19,11 @@ const Stars = () =>
                     value: "#ffffff",
                 },
                 links: {
-                    enable: false,
+                    color: "#ffffff",
+                    distance: 30,
+                    enable: true,
+                    opacity: 0.2,
+                    width: 1,
                 },
                 collisions: {
                     enable: true,
