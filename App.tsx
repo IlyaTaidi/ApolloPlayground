@@ -2,21 +2,22 @@ import { MotiView } from 'moti'
 import React from 'react'
 import { StyleSheet } from 'react-native'
 import { Image as MotiImage } from "moti"
+import Cursor from './Cursor';
 
 function Grain() {
   return (
     <MotiImage
       from={{
-        translateY: 300,
+        translateY: 1000,
       }}
       animate={{
-        translateY: -550,
+        translateY: -1000,
       }}
       transition={{
         loop: true,
         type: 'timing',
         duration: 200,
-        delay: 0,
+        delay: 100,
         repeatReverse: false
       }}
       style={[styles.grain]}
@@ -26,8 +27,21 @@ function Grain() {
     />
   )
 }
+//prevent the right click menu from appearing and 
+//capture the position to later render a custom menu
+document.addEventListener("contextmenu", (event) => {
+  event.preventDefault();
+  const xPos = event.pageX + "px";
+  const yPos = event.pageY + "px";
+})
+//Call the cursor function from cursor.js
+export default function cursor() {
+  return(
+    <Cursor />
+  )
+}
 
-export default function Loop() {
+export function Loop() {
   return (
     <MotiView style={styles.container}>
       <Grain />
@@ -35,15 +49,16 @@ export default function Loop() {
   )
 }
 
+
 const styles = StyleSheet.create({
   grain: {
     justifyContent: 'center',
-    height: 3000,
+    height: '100vh',
     width: '100%',
     backgroundColor: 'transparent',
     overflow: 'hidden',
-    opacity: 0.12
-
+    opacity: 0.8,
+    
   },
   container: {
     flex: 1,
@@ -56,18 +71,4 @@ const styles = StyleSheet.create({
     height: '100%',
     width: '100%',
   },
-
 })
-
-/*const cursor = () {
-  const dot = useRef(null);
-  const dotOutline = useRef(null);
-
-  return (
-    <>
-      <div ref={dotOutline} className='cursor-dot-outline'><</div>
-      <div ref={dot} className="cursor-dot"><</div>
-    </>
-
-  )
-}*/
