@@ -2,6 +2,7 @@ import { MotiView } from 'moti'
 import React from 'react'
 import { StyleSheet } from 'react-native'
 import { Image as MotiImage } from "moti"
+import ExitBeforeEnter from './components/floatingButton'
 
 function Grain() {
   return (
@@ -43,7 +44,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
     overflow: 'hidden',
     opacity: 0.12
-
   },
   container: {
     flex: 1,
@@ -56,7 +56,6 @@ const styles = StyleSheet.create({
     height: '100%',
     width: '100%',
   },
-
 })
 
 /*const cursor = () {
