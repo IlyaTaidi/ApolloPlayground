@@ -6,17 +6,17 @@ function Grain() {
     return (
         <MotiImage
             from={{
-                translateY: 1000,
+                rotate: 0
             }}
             animate={{
-                translateY: -1000,
+                rotate: 90,
             }}
             transition={{
                 loop: true,
                 type: 'timing',
-                duration: 20000,
+                duration: 200,
                 delay: 100,
-                repeatReverse: false
+                repeatReverse: true
             }}
             style={[styles.grain]}
             source={{

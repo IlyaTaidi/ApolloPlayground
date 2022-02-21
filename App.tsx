@@ -5,19 +5,14 @@ import Grain from './components/grain';
 
 //prevent the right click menu from appearing and 
 //capture the position to later render a custom menu
-document.addEventListener("contextmenu", (event) => {
+
+// Commenting out for now while we develop //
+/* document.addEventListener("contextmenu", (event) => {
   event.preventDefault();
   const xPos = event.pageX + "px";
   const yPos = event.pageY + "px";
-})
+}) */
 
-//Call the cursor function from cursor.js
-/* export default function cursor() {
-  return(
-    <Cursor />
-  )
-}
- */
 export default function App() {
   return (
     <MotiView style={styles.container}>
