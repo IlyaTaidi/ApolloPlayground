@@ -1,57 +1,40 @@
-import { AnimatePresence } from 'framer-motion'
-import React, { useReducer } from 'react'
-import { StyleSheet, Pressable } from 'react-native'
-import { MotiView } from 'moti'
+import { motion } from "framer-motion";
 
-function Shape({ bg }: { bg: string }) {
+const draw = {
+    hidden: { pathLength: 0, opacity: 0 },
+    visible: (i) => {
+        const delay = 1 + i * 0.5;
+        return {
+            pathLength: 1,
+            opacity: 1,
+            transition: {
+                pathLength: { delay, type: "spring", duration: 1.5, bounce: 0 },
+                opacity: { delay, duration: 0.01 }
+            }
+        };
+    }
+};
+
+function floatingButton() {
     return (
-        <MotiView
-            from={{
-                opacity: 0,
-                scale: 0.5,
-            }}
-            animate={{
-                opacity: 1,
-                scale: 1,
-            }}
-            exit={{
-                opacity: 0,
-                scale: 0.9,
-            }}
-            style={[styles.shape, { borderColor: bg }]}
-        />
-    )
+        <motion.svg
+            width="600"
+            height="600"
+            viewBox="0 0 600 600"
+            initial="hidden"
+            animate="visible"
+        >
+            <motion.circle
+                cx="100"
+                cy="100"
+                r="80"
+                stroke="#ff0055"
+                variants={draw}
+                custom={1}
+            />
+        </motion.svg>
+    );
 }
 
-export default function ExitBeforeEnter() {
-    const [visible, toggle] = useReducer((s) => !s, true)
-    return (
-        <Pressable onPress={toggle} style={styles.container}>
-            <AnimatePresence exitBeforeEnter>
-                {visible && <Shape bg="red" key="red" />}
-                {!visible && <Shape bg="blue" key="blue" />}
-            </AnimatePresence>
-        </Pressable>
-    )
-}
 
-const styles = StyleSheet.create({
-    shape: {
-        justifyContent: 'center',
-        height: 250,
-        width: 250,
-        borderRadius: 999,
-        marginRight: 10,
-        backgroundColor: 'transparent',
-        borderStyle: 'solid',
-        borderColor: 'white',
-        borderWidth: 2
-    },
-    container: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-        flexDirection: 'row',
-        backgroundColor: '#000000',
-    },
-})
+export default floatingButton

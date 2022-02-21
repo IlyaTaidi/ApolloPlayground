@@ -2,7 +2,7 @@ import { MotiView } from 'moti';
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import Grain from './components/grain';
-
+import Ripple from './components/floatingButton';
 //prevent the right click menu from appearing and 
 //capture the position to later render a custom menu
 
@@ -16,7 +16,8 @@ import Grain from './components/grain';
 export default function App() {
   return (
     <MotiView style={styles.container}>
-      <Grain />
+      {/*       <Grain /> */}
+      <Ripple />
     </MotiView>
   )
 }
