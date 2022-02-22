@@ -5,22 +5,9 @@ import { StyleSheet } from 'react-native'
 
 const Grain = () =>
     <MotiImage
-        from={{
-            rotate: 0
-        }}
-        animate={{
-            rotate: 90,
-        }}
-        transition={{
-            loop: true,
-            type: 'timing',
-            duration: 200,
-            delay: 100,
-            repeatReverse: true
-        }}
-        style={[styles.grain]}
+        style={styles.grain}
         source={{
-            uri: 'https://cdn.discordapp.com/attachments/940382767550697513/945049587062804500/Untitled-1-Recovered.png',
+            uri: 'https://cdn.discordapp.com/attachments/941406533567254629/945629536521965568/GIFNoise.gif',
         }}
     />
 
@@ -31,7 +18,7 @@ const styles = StyleSheet.create({
         width: '100%',
         backgroundColor: 'transparent',
         overflow: 'hidden',
-        opacity: 0.8,
+        opacity: 0.2,
     }
 })
 

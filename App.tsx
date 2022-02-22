@@ -18,9 +18,9 @@ import Stars from './components/stars'
 export default function App() {
   return (
     <MotiView style={styles.container}>
-      {/*       <Grain /> */}
-      {/*       <Ripple /> */}
-      {/*    <Cursor /> */}
+      {<Grain />}
+      {<Ripple />}
+      {<Cursor />}
       <Stars></Stars>
     </MotiView>
   )

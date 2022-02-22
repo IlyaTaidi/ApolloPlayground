@@ -7,9 +7,9 @@ const Stars = () =>
         options={{
             background: {
                 color: {
-                    value: "#000000",
-                },
-            },
+                    value: 'transparent'
+        },
+    },
             fpsLimit: 60,
             interactivity: {
                 detectsOn: "canvas",
