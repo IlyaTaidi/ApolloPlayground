@@ -33,7 +33,7 @@ const Stars = () =>
                     enable: true,
                     outMode: "out",
                     random: true,
-                    speed: 0.08,
+                    speed: 0.1,
                     straight: false,
                 },
                 number: {
