@@ -14,7 +14,7 @@ const Grain = () =>
 const styles = StyleSheet.create({
     grain: {
         justifyContent: 'center',
-        height: '100vh',
+        height: '100%',
         width: '100%',
         backgroundColor: 'transparent',
         overflow: 'hidden',

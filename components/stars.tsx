@@ -5,15 +5,7 @@ const Stars = () =>
     <Particles
         id="tsparticles"
         options={{
-            background: {
-                color: {
-                    value: 'transparent'
-        },
-    },
             fpsLimit: 60,
-            interactivity: {
-                detectsOn: "canvas",
-            },
             particles: {
                 color: {
                     value: "#ffffff",
@@ -24,9 +16,6 @@ const Stars = () =>
                     enable: true,
                     opacity: 0.2,
                     width: 1,
-                },
-                collisions: {
-                    enable: true,
                 },
                 move: {
                     direction: "none",
@@ -46,15 +35,11 @@ const Stars = () =>
                 opacity: {
                     value: 0.5,
                 },
-                shape: {
-                    type: "circle",
-                },
                 size: {
                     random: false,
                     value: 1,
                 },
             },
-            detectRetina: true,
         }}
     />
 
