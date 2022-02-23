@@ -7,7 +7,7 @@ const Grain = () =>
     <MotiImage
         style={styles.grain}
         source={{
-            uri: 'https://cdn.discordapp.com/attachments/941406533567254629/945629536521965568/GIFNoise.gif',
+            uri: 'https://cdn.discordapp.com/attachments/940382767550697513/946162216619634728/GrainTestInverted.gif',
         }}
     />
 
@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
         height: '100%',
         width: '100%',
         overflow: 'hidden',
-        opacity: 0.1,
+        opacity: 0.05,
     }
 })
 

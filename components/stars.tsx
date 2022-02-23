@@ -8,7 +8,7 @@ const Stars = () =>
             fpsLimit: 60,
             particles: {
                 color: {
-                    value: "#fdfbb1",
+                    value: "#b1d7fd",
                 },
                 links: {
                     color: "#ffffff",
