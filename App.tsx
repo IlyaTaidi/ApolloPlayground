@@ -1,10 +1,12 @@
 import { MotiView } from 'moti';
-import React from 'react';
+import React, {useState} from 'react';
 import { StyleSheet } from 'react-native';
 import Grain from './components/grain';
 import Ripple from './components/floatingButton';
 import Cursor from './components/cursor';
-import Stars from './components/stars'
+import Stars from './components/stars';
+import Backdrop from './components/backdrop';
+
 //prevent the right click menu from appearing and 
 //capture the position to later render a custom menu
 
@@ -22,6 +24,7 @@ export default function App() {
       {<Ripple />}
       {<Cursor />}
       <Stars></Stars>
+      <backdrop></backdrop>
     </MotiView>
   )
 }
