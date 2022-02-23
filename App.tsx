@@ -19,8 +19,8 @@ export default function App() {
   return (
     <MotiView style={styles.container}>
       {<Grain />}
-      {/* <Ripple /> */}
-      {/* <Cursor /> */}
+      {<Ripple />}
+      {<Cursor />}
       <Stars></Stars>
     </MotiView>
   )

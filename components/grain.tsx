@@ -16,9 +16,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         height: '100%',
         width: '100%',
-        backgroundColor: 'transparent',
         overflow: 'hidden',
-        opacity: 0.2,
+        opacity: 0.1,
     }
 })
 

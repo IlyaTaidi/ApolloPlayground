@@ -8,13 +8,13 @@ const Stars = () =>
             fpsLimit: 60,
             particles: {
                 color: {
-                    value: "#ffffff",
+                    value: "#fdfbb1",
                 },
                 links: {
                     color: "#ffffff",
-                    distance: 30,
+                    distance: 50,
                     enable: true,
-                    opacity: 0.2,
+                    opacity: 0.5,
                     width: 1,
                 },
                 move: {
@@ -22,25 +22,36 @@ const Stars = () =>
                     enable: true,
                     outMode: "out",
                     random: true,
-                    speed: 0.2,
+                    speed: 0.1,
                     straight: false,
                 },
                 number: {
                     density: {
                         enable: true,
-                        value_area: 600,
+                        value_area: 900,
                     },
-                    value: 60,
+                    value: 100,
                 },
                 opacity: {
-                    value: 0.5,
+                    value: 0.1,
+                },
+                twinkle: {
+                    lines: {
+                        enable: true,
+                        frequency: 100,
+                        opacity: .5
+                    },
+                    particles: {
+                        enable: true,
+                        frequency: 100,
+                        opacity: .5
+                    }
                 },
                 size: {
-                    random: false,
-                    value: 1,
+                    random: true,
+                    value: 2.5,
                 },
             },
         }}
     />
-
 export default Stars
